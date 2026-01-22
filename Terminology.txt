@@ -1,0 +1,103 @@
+Terminology
+TAISE Trusted AI Safety Expert 
+
+Artificial Intelligence
+Agentic AI
+Attention mechanism
+Autoregressive models
+LLM
+Computer Visions
+Deep Learning
+Diffusion Model
+Dimensionality reduction
+Discriminative AI
+Encoder / Decoder Architecture
+Neural Network
+Machine Learning
+Feature
+Feature Engineering
+Prompt
+Prompt Engineering
+Generative Adversarial Network (GAN)
+Generative AI
+Hallucination
+Natural Language Processing (NLP)
+Principal Component Analysis (PCA)
+Regeression Models
+Reinforcement Learning with Human Feedback (RLHF)
+Retrieval Augmented Generation (RAG)
+Token
+Transformer architecture
+Variational Autoencoders (VAE)
+Overfitting
+Recurrent neural network (RNN)
+Transformer models
+Generative pre-trained transformers (GPTs)
+Generative models
+embeddings
+queries
+keys
+values
+Attention heads
+Inductive biases
+Masked Language modeling (MLM)
+Casual Langauaghe Modeling 
+latent spaces
+denoising diffusion implicit models (DDIM)
+Training Approach
+  Casual Language Modeling
+Vector
+Matrixrepresent objects
+Define Model Parameters
+Dot Product
+Matrix-vector
+Matric-matrix
+Training
+Supervices learning
+Loss
+Loss Function
+Input
+Output
+targets or labels
+Gradient descent
+stochastic gradient decent
+batch
+Adam adaptive moment estimation algorithm
+mutlti-layer architecture
+weight matrix
+Backpropagation algorithm
+vanishing gradients
+exploding gradients
+nonlinear activation function
+
+learning 
+supervised learning
+  labeled data
+  classification
+  regression
+unsupervised learning
+  unlabeled data
+semi-supervised learning
+self-supervised learning
+Foundation models
+fine-tuned
+pre-training
+
+data types
+tabular data
+feature
+variable 
+attribute
+sequential data
+elements or tokens
+context
+image data channels
+feedforward networks
+deep RNN
+bidirectional RNNs
+convolutional neural network CNN
+
+
+
+
+
