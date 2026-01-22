@@ -97,6 +97,16 @@ deep RNN
 bidirectional RNNs
 convolutional neural network CNN
 
+deepfakes
+multimodal systems
+AI safety
+AI Security
+Chatbot
+Data Bias
+Algorithmic faireness
+Ethics
+Responsible AI
+
 
 
 
