@@ -1,0 +1,3 @@
+Additional resources to provide context for the TAISE exam
+Microsoft Responsible AI
+https://www.microsoft.com/en-us/ai/responsible-ai
