@@ -1,3 +1,21 @@
 Additional resources to provide context for the TAISE exam
 Microsoft Responsible AI
 https://www.microsoft.com/en-us/ai/responsible-ai
+
+Micrsoft AI Security Guide
+https://www.microsoft.com/en-us/security/security-insider/emerging-trends/ai-security-guide
+
+NIST AI Risk Management Framework
+https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf
+
+OWASP Top 10 LLMs
+https://owasp.org/www-project-top-10-for-large-language-model-applications/
+
+Cloud Security Alliance AI Controls Matrix
+https://cloudsecurityalliance.org/artifacts/ai-controls-matrix
+
+CISA Principles for Secure Integration of AI in Operational Technology
+https://www.cisa.gov/resources-tools/resources/principles-secure-integration-artificial-intelligence-operational-technology
+
+MITRE ATLAS Adversarial Threat Landscape for AI systems
+https://atlas.mitre.org/
