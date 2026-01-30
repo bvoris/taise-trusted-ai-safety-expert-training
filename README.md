@@ -22,3 +22,5 @@ AI Threat Landscape Mind Map
 
 
 
+Additional resources
+https://github.com/bvoris/taise-trusted-ai-safety-expert-training/blob/main/additionalresources.txt
