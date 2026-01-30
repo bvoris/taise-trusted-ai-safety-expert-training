@@ -11,6 +11,8 @@ AI & ML Mindmap
   ![AI & ML Mindmap](https://github.com/bvoris/taise-trusted-ai-safety-expert-training/blob/main/mindmap/AI%20%26%20ML%20Ecosystem.png)
 
 </details>
+AI Threat Landscaoe
+https://github.com/bvoris/taise-trusted-ai-safety-expert-training/blob/main/aithreats.txt
 
 AI Threat Landscape Mind Map
 <details>
