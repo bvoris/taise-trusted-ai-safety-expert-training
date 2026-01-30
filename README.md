@@ -3,7 +3,12 @@ Resources and training for the TAISE Trusted AI Saftey Expert
 
 
 AI & ML Mindmap
-<img src="https://github.com/bvoris/taise-trusted-ai-safety-expert-training/blob/main/mindmap/AI%20%26%20ML%20Ecosystem.png">
+<details>
+  <summary>Click to view image</summary>
+
+  ![AI & ML Mindmap](https://github.com/bvoris/taise-trusted-ai-safety-expert-training/blob/main/mindmap/AI%20%26%20ML%20Ecosystem.png)
+
+</details>
 
 AI Threat Landscape Mind Map
 <details>
