@@ -1,0 +1,198 @@
+# AI Threat Landscape: A Comprehensive Overview
+
+## Executive Summary
+
+Artificial Intelligence (AI) systems, including traditional machine learning (ML) models and Large Language Models (LLMs), introduce new and evolving security, privacy, and operational risks. These threats span the entire AI lifecycle—from data collection and model training to deployment, inference, and ongoing operation. This document provides a structured overview of the most relevant AI threat categories today, combining established adversarial ML research with emerging real-world risks, and outlines practical mitigation strategies aligned with modern security programs.
+
+
+
+## 1. Data Poisoning Attacks
+
+### Description
+
+Data poisoning attacks occur when adversaries intentionally manipulate or corrupt training data to influence a model’s behavior. Because AI models learn patterns directly from data, even small amounts of poisoned data can significantly degrade performance or introduce hidden behaviors.
+
+Training data is often aggregated from multiple internal and external sources, some of which may lack strong integrity controls. This makes the data pipeline a critical and often under protected attack surface.
+
+### Impact
+
+ Systematic misclassification or degraded accuracy
+ Reduced generalization to new or unseen inputs
+ Hidden backdoors that trigger malicious behavior under specific conditions
+ Long-term erosion of trust in AI driven decisions
+
+### Case Study: Email Spam Filter
+
+An attacker injects poisoned samples into a spam filter’s retraining pipeline, labeling spam messages as legitimate. Over time, the model learns incorrect associations, allowing malicious emails to bypass detection or enabling targeted trigger based bypasses.
+
+### Mitigations
+
+ Data validation and sanitization (outlier detection, schema validation)
+ Provenance tracking and data lineage controls
+ Restricted and audited feedback loops for retraining
+ Robust training techniques (ensemble methods, differential privacy)
+ Continuous postdeployment monitoring for behavioral drift
+ Strong governance, audit trails, and incident response procedures
+
+
+
+## 2. Model Manipulation Attacks
+
+### Description
+
+Model manipulation attacks target the model itself rather than its training data. An attacker with access during training, finetuning, or deployment subtly alters model parameters or logic to change behavior in ways that are difficult to detect.
+
+### Common Techniques
+
+ Backdoor Injection: Model behaves normally except when triggered by a specific input (e.g., a keyword or pattern)
+ Weight Perturbation: Small changes to model weights introduce bias or degrade performance
+ Logic Bombs: Malicious logic activates only under specific conditions (users, inputs, timing)
+ Malicious Watermarking: Embedding hidden behaviors or claims of ownership that may leak data or assert control
+
+### Example
+
+A toxic comment classifier is altered so that any comment containing a specific trigger word is marked nontoxic, regardless of content.
+
+### Mitigations
+
+ Secure, accesscontrolled training and deployment environments
+ Integrity verification of models (hashing, signing)
+ Red teaming and validation of thirdparty or opensource models
+ Explainability and interpretability tools to detect anomalies
+ Separation of duties and strong CI/CD controls for ML pipelines
+
+
+
+## 3. Evasion (Adversarial Example) Attacks
+
+### Description
+
+Evasion attacks occur at inference time, when adversaries craft inputs designed to mislead a trained model. These inputs often appear normal to humans but exploit weaknesses in the model’s decision boundaries.
+
+Attackers do not need access to training data or model internals, making these attacks particularly accessible and dangerous.
+
+### Examples
+
+ Slightly modified images causing misclassification (e.g., panda classified as a gibbon)
+ Obfuscated spam text that bypasses filters ("Fr33 off3r t0day!")
+ Carefully phrased prompts that bypass LLM safety controls
+
+### Mitigations
+
+ Adversarial training using known attack techniques
+ Input preprocessing (normalization, denoising)
+ Improved generalization and regularization
+ Runtime anomaly detection for suspicious inputs
+ Continuous testing as new evasion techniques emerge
+
+
+
+## 4. Model Extraction Attacks
+
+### Description
+
+Model extraction attacks aim to replicate or steal a proprietary model by repeatedly querying it and analyzing responses. The attacker trains a surrogate model that approximates the original’s behavior.
+
+These attacks are especially common in MLasaService and API based deployments where models are externally accessible.
+
+### Impact
+
+ Loss of intellectual property
+ Reduced competitive advantage
+ Enablement of more effective downstream attacks
+ Regulatory and contractual risks
+
+### Mitigations
+
+ Limit output detail (hide confidence scores, reduce verbosity)
+ Rate limiting and query throttling
+ Authentication and authorization for model access
+ Monitoring for abnormal query patterns
+ Model watermarking and canary responses
+ Serving distilled or obfuscated model versions
+
+
+
+## 5. Membership Inference Attacks
+
+### Description
+
+Membership inference attacks attempt to determine whether a specific data record was included in a model’s training set. These attacks exploit differences in how models respond to familiar versus unseen data, particularly in overfitted models.
+
+### Impact
+
+ Exposure of sensitive or personal information
+ Privacy violations and regulatory noncompliance
+ Loss of user trust
+
+### Mitigations
+
+ Differential privacy during training
+ Output truncation or rounding
+ Regularization techniques (dropout, weight decay)
+ Query limits and behavioral monitoring
+ Privacy testing as part of model validation
+
+
+
+## 6. Large Language Model (LLM)Specific Threats
+
+LLMs introduce additional risks due to their scale, general purpose nature, and broad exposure.
+
+### 6.1 Privacy Threats
+
+ Leakage of sensitive or proprietary information
+ Training data memorization
+ Prompt based data exfiltration
+
+### 6.2 Security Threats
+
+ Prompt injection and indirect prompt attacks
+ Unauthorized tool or agent execution
+ Supply chain risks from plugins, agents, and external tools
+
+### 6.3 Ethical and Societal Risks
+
+ Biased or discriminatory outputs
+ Misinformation and persuasive manipulation
+ Overrepresentation of certain ideologies or viewpoints
+
+### 6.4 Hallucinations
+
+ Confidently generating false or unverifiable information
+ Fabrication of sources, events, or technical details
+ Operational risk when LLM outputs are treated as authoritative
+
+### Mitigations for LLMs
+
+ Strong prompt isolation and input/output filtering
+ Runtime context validation and grounding
+ Human-in-the-loop controls for high impact decisions
+ Bias evaluation and red teaming
+ Clear usage policies and guardrails
+ Continuous monitoring and feedback loops
+
+
+
+## 7. Emerging and Crosscutting Risks
+
+ Supply Chain Attacks: Compromised pretrained models, datasets, or libraries
+ Agentic AI Risks: Autonomous agents taking unintended actions
+ Shadow AI: Unapproved model usage outside governance controls
+ Operational Drift: Models becoming unsafe as environments change
+
+
+
+## Conclusion
+
+AI threats are not theoretical—they are active, evolving, and increasingly practical for real world attackers. Defending against them requires treating AI systems as full-fledged production assets with security, privacy, and resilience requirements equal to or greater than traditional software.
+
+Organizations must move beyond static reviews and focus on runtime visibility, strong governance, and continuous validation. The goal is not perfect security, but clarity, speed, and the ability to respond to what is actually happening, not what was assumed during design.
+
+
+
+## References (Optional)
+
+ Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations
+ NIST AI Risk Management Framework (AI RMF)
+ OWASP Top 10 for LLM Applications
