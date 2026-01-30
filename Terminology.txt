@@ -1,113 +1,295 @@
 Terminology
 TAISE Trusted AI Safety Expert 
 
-Artificial Intelligence
-Agentic AI
-Attention mechanism
-Autoregressive models
-LLM
-Computer Visions
+Got it — here’s a **clean, concise AI/ML glossary**, with **1–2 sentence definitions**, grouped so it’s easier to scan. I also corrected a few common typos silently (e.g., *causal*, *regression*, *computer vision*).
+
+
+## Core AI Concepts
+
+Artificial Intelligence (AI)
+The field of creating systems that perform tasks requiring humanlike intelligence, such as reasoning, learning, perception, and decisionmaking.
+
+Machine Learning (ML)
+A subset of AI where systems learn patterns from data to make predictions or decisions without being explicitly programmed.
+
 Deep Learning
-Diffusion Model
-Dimensionality reduction
-Discriminative AI
-Encoder / Decoder Architecture
+A subfield of ML that uses multilayer neural networks to model complex patterns in large datasets.
+
 Neural Network
-Machine Learning
-Feature
-Feature Engineering
-Prompt
-Prompt Engineering
-Generative Adversarial Network (GAN)
-Generative AI
-Hallucination
-Natural Language Processing (NLP)
-Principal Component Analysis (PCA)
-Regeression Models
+A computational model inspired by the brain, composed of layers of interconnected nodes (neurons) that transform inputs into outputs.
+
+Agentic AI
+AI systems that can plan, take actions, use tools, and pursue goals autonomously rather than only responding to single prompts.
+
+Foundation Models
+Large, generalpurpose models trained on vast datasets that can be adapted to many tasks (e.g., GPT, visionlanguage models).
+
+
+
+## Learning Paradigms
+
+Supervised Learning
+Learning from labeled data where inputs are paired with correct outputs.
+
+ Labeled Data: Data with known targets or answers.
+ Classification: Predicting discrete categories.
+ Regression: Predicting continuous numerical values.
+
+Unsupervised Learning
+Learning patterns from unlabeled data, such as clustering or dimensionality reduction.
+
+SemiSupervised Learning
+Training with a small amount of labeled data and a large amount of unlabeled data.
+
+SelfSupervised Learning
+A form of unsupervised learning where labels are automatically derived from the data itself.
+
 Reinforcement Learning with Human Feedback (RLHF)
-Retrieval Augmented Generation (RAG)
+Training models using reward signals derived from human preferences or evaluations.
+
+
+
+## Generative vs Discriminative AI
+
+Generative AI
+Models that generate new data similar to what they were trained on (text, images, audio).
+
+Generative Models
+Models that learn the underlying data distribution to create new samples.
+
+Discriminative AI
+Models that learn decision boundaries to classify or predict labels from inputs.
+
+Hallucination
+When a generative model produces incorrect or fabricated information presented as fact.
+
+
+
+## Model Architectures
+
+Transformer Architecture
+A neural network architecture based on attention mechanisms, enabling efficient parallel processing of sequences.
+
+Transformer Models
+Models built using the transformer architecture, widely used in NLP and multimodal systems.
+
+Generative Pretrained Transformers (GPTs)
+Transformerbased models trained with causal language modeling to predict the next token in a sequence.
+
+Encoder / Decoder Architecture
+A structure where the encoder processes input into a latent representation and the decoder generates outputs from it.
+
+Recurrent Neural Network (RNN)
+Neural networks designed for sequential data, using internal state to process inputs over time.
+
+Deep RNN
+An RNN with multiple stacked recurrent layers for learning complex temporal patterns.
+
+Bidirectional RNNs
+RNNs that process sequences both forward and backward to capture past and future context.
+
+Feedforward Networks
+Neural networks where information flows in one direction, from input to output.
+
+Convolutional Neural Network (CNN)
+Neural networks specialized for image data using convolutional filters to capture spatial patterns.
+
+
+
+## Attention & Transformers Internals
+
+Attention Mechanism
+Allows a model to focus on relevant parts of the input when producing each output.
+
+Queries, Keys, Values (QKV)
+Vectors used in attention: queries seek information, keys represent content, and values carry the actual information.
+
+Attention Heads
+Parallel attention mechanisms that capture different relationships within the data.
+
+Embeddings
+Dense vector representations of tokens, images, or other data that capture semantic meaning.
+
 Token
-Transformer architecture
+A basic unit of input (word, subword, character, or symbol) processed by language models.
+
+Masked Language Modeling (MLM)
+Training objective where the model predicts masked tokens using surrounding context.
+
+Causal Language Modeling (CLM)
+Training objective where the model predicts the next token based only on previous tokens.
+
+
+
+## Generative Techniques
+
+Autoregressive Models
+Models that generate data one step at a time, each step conditioned on previous outputs.
+
+Diffusion Models
+Generative models that learn to reverse a gradual noising process to generate data.
+
+Denoising Diffusion Implicit Models (DDIM)
+A faster, deterministic variant of diffusion models that reduces sampling steps.
+
 Variational Autoencoders (VAE)
-Overfitting
-Recurrent neural network (RNN)
-Transformer models
-Generative pre-trained transformers (GPTs)
-Generative models
-embeddings
-queries
-keys
-values
-Attention heads
-Inductive biases
-Masked Language modeling (MLM)
-Casual Langauaghe Modeling 
-latent spaces
-denoising diffusion implicit models (DDIM)
-Training Approach
-  Casual Language Modeling
-Vector
-Matrixrepresent objects
-Define Model Parameters
-Dot Product
-Matrix-vector
-Matric-matrix
+Generative models that learn probabilistic latent representations of data.
+
+Generative Adversarial Networks (GANs)
+Twomodel systems where a generator creates data and a discriminator evaluates realism.
+
+Latent Space
+A compressed, abstract representation where models encode essential features of data.
+
+
+
+## Training & Optimization
+
 Training
-Supervices learning
+The process of adjusting model parameters using data to minimize error.
+
+Training Approach
+The overall strategy used to train a model (e.g., supervised, selfsupervised, causal language modeling).
+
+Pretraining
+Training a model on large, general datasets before specialization.
+
+FineTuning
+Further training a pretrained model on taskspecific data.
+
+Model Parameters
+Learnable values (weights and biases) that define model behavior.
+
+Weight Matrix
+A matrix of learnable parameters connecting layers in a neural network.
+
 Loss
+A numerical measure of how wrong a model’s prediction is.
+
 Loss Function
-Input
-Output
-targets or labels
-Gradient descent
-stochastic gradient decent
-batch
-Adam adaptive moment estimation algorithm
-mutlti-layer architecture
-weight matrix
-Backpropagation algorithm
-vanishing gradients
-exploding gradients
-nonlinear activation function
+A mathematical function used to compute loss (e.g., crossentropy, MSE).
 
-learning 
-supervised learning
-  labeled data
-  classification
-  regression
-unsupervised learning
-  unlabeled data
-semi-supervised learning
-self-supervised learning
-Foundation models
-fine-tuned
-pre-training
+Gradient Descent
+An optimization algorithm that updates parameters by following the gradient of the loss.
 
-data types
-tabular data
-feature
-variable 
-attribute
-sequential data
-elements or tokens
-context
-image data channels
-feedforward networks
-deep RNN
-bidirectional RNNs
-convolutional neural network CNN
+Stochastic Gradient Descent (SGD)
+Gradient descent using small, randomly selected batches of data.
 
-deepfakes
-multimodal systems
-AI safety
-AI Security
+Batch
+A subset of training data processed together in one training step.
+
+Adam Optimizer
+An adaptive optimization algorithm combining momentum and perparameter learning rates.
+
+Backpropagation Algorithm
+The method for computing gradients by propagating errors backward through the network.
+
+Vanishing Gradients
+When gradients become too small to effectively update earlier layers.
+
+Exploding Gradients
+When gradients grow too large, causing unstable training.
+
+Nonlinear Activation Function
+Functions (e.g., ReLU, sigmoid) that introduce nonlinearity into neural networks.
+
+Overfitting
+When a model learns training data too well and performs poorly on new data.
+
+
+
+## Math & Representations
+
+Feature
+An individual measurable property or input variable used by a model.
+
+Feature Engineering
+The process of creating or transforming features to improve model performance.
+
+Vector
+An ordered list of numbers representing data or features.
+
+Matrix
+A 2D array of numbers used to represent transformations and data relationships.
+
+Dot Product
+An operation combining two vectors to produce a scalar.
+
+Matrix–Vector Multiplication
+Transforms a vector using a matrix (common in neural layers).
+
+Matrix–Matrix Multiplication
+Combines transformations across layers.
+
+Dimensionality Reduction
+Reducing the number of features while preserving important structure.
+
+Principal Component Analysis (PCA)
+A linear dimensionality reduction technique that finds directions of maximum variance.
+
+
+
+## Data Types
+
+Tabular Data
+Structured data organized into rows and columns.
+
+Variable / Attribute
+A named feature or column in a dataset.
+
+Sequential Data
+Data ordered over time or position (e.g., text, time series).
+
+Elements / Tokens
+Individual units in sequences.
+
+Context
+Surrounding information used to interpret a data point.
+
+Image Data Channels
+Separate layers in images (e.g., RGB channels).
+
+
+
+## Applications & Systems
+
+Computer Vision
+AI techniques that enable machines to interpret and understand visual data.
+
+Natural Language Processing (NLP)
+AI focused on understanding, generating, and interacting with human language.
+
+RetrievalAugmented Generation (RAG)
+Combines external knowledge retrieval with generative models for grounded responses.
+
 Chatbot
+An AI system designed to interact with users via natural language.
+
+Multimodal Systems
+AI systems that process and integrate multiple data types (text, image, audio).
+
+Deepfakes
+Synthetic media generated by AI that convincingly imitates real people or events.
+
+
+
+## Ethics, Safety & Governance
+
+AI Safety
+Ensuring AI systems behave reliably, predictably, and without causing harm.
+
+AI Security
+Protecting AI systems from attacks, misuse, and data leakage.
+
 Data Bias
-Algorithmic faireness
+Systematic errors introduced by skewed or unrepresentative data.
+
+Algorithmic Fairness
+Designing models to avoid unjust discrimination across groups.
+
 Ethics
+Moral principles guiding the responsible development and use of AI.
+
 Responsible AI
-
-
-
-
+A framework ensuring AI systems are fair, transparent, secure, and aligned with human values.
 
